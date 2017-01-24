@@ -4,7 +4,7 @@ before_script:
 
 script:
 - export ARCH=arm
-- export CROSS_COMPILE="$HOME/arm-eabi-4.4.3/bin/arm-eabi-"
+- export CROSS_COMPILE="$HOME/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-"
 - make -j4 arubaslim_europen_user_defconfig
 - make -j4 
 - mv arch/arm/boot/zImage zImage
