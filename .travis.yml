@@ -1,11 +1,11 @@
 language: c
 before_script:
-- git clone "https://github.com/STS-Dev-Team/arm-eabi-4.4.3.git" "$HOME/android_prebuilt_toolchains"
+- git clone "https://github.com/ZIM555/android_prebuilts_gcc.git" "$HOME/android_prebuilt_toolchains"
 
 script:
 - export ARCH=arm
-- export CROSS_COMPILE="$HOME/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-"
-- make -j4 arubaslim_europen_user_defconfig
+- export CROSS_COMPILE="$HOME/android_prebuilt_toolchains/arm-eabi-4.7/bin/arm-eabi-"
+- make -j4 arubaslim_europen_user_defconfig	
 - make -j4 
 - mv arch/arm/boot/zImage zImage
 - md5sum zImage > md5
